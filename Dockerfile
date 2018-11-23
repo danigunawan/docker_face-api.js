@@ -10,7 +10,7 @@ RUN . $HOME/.nvm/nvm.sh && cd /node_/face-api.js/ && npm i
 RUN . $HOME/.nvm/nvm.sh && cd /node_/face-api.js/examples/examples-nodejs/ && npm i
 RUN . $HOME/.nvm/nvm.sh && npm install -g ts-node && npm install -g typescript
 
-#ENV PATH $PATH:/root/.nvm/versions/node/$SHIPPABLE_NODE_VERSION/bin/
+ENV PATH="/root/.nvm/versions/node/$SHIPPABLE_NODE_VERSION/bin/:${PATH}"
 #RUN . $HOME/.nvm/nvm.sh && cd /node_/face-api.js/examples/examples-nodejs && tsc faceDetection.ts && tsc faceRecognition.ts && tsc faceLandmarkDetection.ts && tsc faceRecognition.ts
 #RUN . $HOME/.nvm/nvm.sh && cd /node_/face-api.js/examples/examples-nodejs && node faceDetection.js && node faceLandmarkDetection.js && node faceRecognition.js
 
